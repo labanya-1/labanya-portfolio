@@ -1,0 +1,398 @@
+*{
+margin: 0%;
+padding: 0%;
+font-family: 'poppins',sans-serif;
+box-sizing: border-box;
+}
+body{
+  background: black ;  
+  color: rgb(252, 254, 255);
+}
+ 
+:root {
+    --black: #171321;
+    --hotmag:#e310cb ;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--mono);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    background-image: url('https://getwallpapers.com/wallpaper/full/5/6/b/885634-black-cat-background-1920x1080-for-pc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 230%;
+}
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+.gradient {
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+    height: 2px;
+}
+nav {
+    font-size: 80%;
+    padding: 4rem 1rem;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+.button {
+    background-color: var(--magenta);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--mono);
+}
+.button:hover {
+    color: white;
+    background-color: var(--hotmag);
+}
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: inherit;
+    right: inherit;
+    bottom: 0;
+    z-index: -1;
+}
+/* =========header text============ */
+.header-text{
+    margin-top: 5%; 
+    font-size: 30px;
+
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: aqua;
+}
+/* ---------about---------- */
+#about{
+    padding: 80px 0;
+    color: rgb(255, 255, 255);
+    
+}
+.row{
+  display: flex;  
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.about-col-1{
+    flex-basis: 35%;
+    
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(253, 253, 253);
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: aqua;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+width: 50%;
+}
+.tab-contents ul li{
+list-style: none;
+margin: 10px 0;
+}
+.tab-contents ul li span{
+   color: rgb(121, 193, 193); 
+   font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+  display:block ;  
+}
+/* ---------skills-------------- */
+
+/* ----------services---------- */
+.sub-title{
+    text-align: center;
+}
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+background: rgb(65, 66, 66);
+padding: 40px;
+font-size: 13px;
+font-weight: 300;
+border-radius: 10px;
+transition:background 0.5s, transform 0.5s;
+}
+.services-list div i{
+font-size: 50px;
+margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+   text-decoration: none; 
+color: aqua;
+font-size: 12px;
+margin-top: 20px;
+display: inline-block;
+}
+.services-list div:hover{
+    background-color: rgb(59, 122, 122);
+    transform: translateY(-10px);
+}
+/* ---------PORTFOLIO-------- */
+#portfolio{
+    padding:50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius:10px ;
+    display: block;
+    transition: transform 0.5s;
+    height: 300px;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 255, 255, 0.377);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.5s;
+    color: #171321;
+    font-size: medium;
+    font-weight: 600;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000000;
+}
+.layer a{
+    margin-top: 20px;
+    color: rgb(69, 69, 159);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 50px;
+    background-color: rgb(250, 252, 253);
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+   
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border:1px solid rgb(8, 124, 239)  ;
+    padding: 14px 50px;
+border: radius 6px; 
+text-decoration: none;
+color: rgb(250, 253, 255);
+transition: background 0.5s;
+}
+.btn:hover{
+    
+    background-color: rgb(25, 112, 112);
+}
+/* ------------contact----------- */
+.contact-left{
+flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+    }
+    .contact-left p{
+        margin-top: 30px;
+    }
+    .contact-left p i{
+        color: rgb(36, 87, 88);
+        margin-right: 15px;
+        font-size: 25px;
+    }
+    .socialicons{
+        margin-top:30px ;
+    }
+    .btn.btn2{
+        display: inline-block;
+        background-color: rgb(26, 104, 104);
+    }
+    
+    form input,form textarea{
+        width: 100%;
+        border: 0;
+       outline: none; 
+       background-color: rgb(185, 193, 193);
+       padding: 15px;
+       margin: 15px 0;
+       font-size: 18px;
+       border-radius: 6px;
+       color: rgb(4, 4, 4);
+    }
+    form btn2{
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .copyright{
+        width: 100%;
+        text-align: center;
+        padding: 25PX;
+        font-weight: 300;
+        background-color: rgb(121, 123, 125);
+        margin-top: 20PX;
+    }
+    .copyright i{
+        color: rgb(0, 0, 0);
+    }
+    /* ------css for small screen-------- */
+    nav fa{
+        display: none;
+    }
+    @media only screen and (max-width:600px){
+       .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+       } 
+       .header-text h1{
+        font-size: 30px;
+       }
+       nav.fa{
+        display: block;
+        font-size: 25px;
+        
+       }
+    }
